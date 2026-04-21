@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARM</title>
+    <link rel="stylesheet" href="ARM.css">
+    <link rel="icon" href="BEELINE.ico" type="image/x-icon">
+</head>
+    <body>
+        <header>
+            <div class="cap">
+                <div class="main_header"> 
+                    <div class="header_tabs" >
+                        <p class="LOGO">АРМ</p>
+                        <img src="BEELINE.png" alt=".!.">
+                        <p class="LOGOO">билайн</p>
+                        <div class="tt">
+                            <p>Клиент</p>
+                            <p>Открытые интеракции</p>
+                        </div>
+                         <div class="srch">
+                            <div class="search-container">
+                                <input type="text" class="main-inputt" placeholder="Введите CTN" onkeypress="if(event.key === 'Enter') searchClient()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+            <main>
+                <div class="Container">
+                    <div class="sidebar">
+                        <div class="tiles">
+                            <p class="TT_tabs">О клиенте</p>
+                            <p id="client-name" class="T_tabs"></p>
+                            <div class="A">
+                                <p class="TT_tabs">Год рождения</p>
+                                <p id="client-birth" class="TTT_tabs"></p>
+                            </div>
+                            <div class="A">
+                                <p class="TT_tabs">Дата заключения договора</p>
+                                <p id="client-contract" class="TTT_tabs"></p>
+                            </div>
+                            <div class="A">
+                                <p class="TT_tabs">Как обращаться к клиенту</p>
+                                <div class="Name">
+                                    <input type="text" class="main-input" placeholder="Введите имя">
+                                </div>
+                            </div>
+                            <Div class="Prepeid">
+                                <p id="client-AT" class="TTT_tabs_A"></p>
+                                <p id="client-form_payment"class="TTT_tabs_B"></p>
+                                <p id="client-condition"class="TTT_tabs_C"></p>
+                                <p id="client-agreement" class="TTT_tabs_D"></p>
+                            </Div>
+                            <div class="A">
+                                <p class="TT_tabs">CTN</p>
+                                <p id="client-ctn" class="TTT_tabs"></p>
+                            </div>
+                            <div class="A">
+                                <p class="TT_tabs">Данные по МП/ЛK</p>
+                                <Div class="Prepeid">
+                                    <p id="client-LK" class="TTT_tabs_C"></p>
+                                </Div>
+                                <p class="TT_tabs">Версия приложения</p>
+                                <p class="TTT_tabs">5.28.1</p>
+                            </div>
+                            <div class="A">
+                                <p class="TT_tabs">Баланс</p>
+                                <p id="client-balance" class="TTT_tabs"></p>
+                            </div>
+                            <div class="A">
+                                <p class="TT_tabs">Локация и адрес подключения</p>
+                                <p id="client-location" class="TTT_tabs"></p>
+                            </div>
+                            <div class="A">
+                                <p class="TT_tabs">Филиал подключения</p>
+                                <p id="client-region" class="TTT_tabs"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control_panel">
+                        <div class="control_icon">
+                            <div>
+                                <a href="#" class="icon-link">
+                                    <img src="Notes.png" alt="Описание">
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <img src="Bug_Report.png" alt="Описание">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="icon-link">
+                                    <img src="Tool.png" alt="Описание">
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <img src="History_Int.png" alt="Описание">
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <img src="Int.png" alt="Описание">
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <img src="PD.png" alt="Описание">
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <img src="S_info.png" alt="Описание">
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <img src="PP.png" alt="Описание">
+                                </a>
+                                <a href="#" class="icon-link">
+                                    <img src="CS.png" alt="Описание">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-area">
+                            <div class="Tools">
+                                <p>Общие данные</p>
+                                <p>Диагностика</p>
+                                <p>Детализация</p>
+                                <p>Предложения</p>
+                                <p>Смена ТП</p>
+                                <p>Задания</p>
+                                <p>Поиск ТТ</p>
+                            </div>
+                            <div class="content-areaL">
+                                <div class="card_A">
+                                    <p class="T_tabs">Баланс</p>
+                                    <p class="TTT_tabs">Основной баланс</p>
+                                    <p class="T_tabs js-balance-value"></p>
+                                </div>
+                                <div class="card_A">
+                                    <p class="T_tabs js-tariff-name"></span></p>
+                                    <div class="base_bar_container">
+                                        <div class="GB_bar_fill js_GB_bar"></div>
+                                    </div>
+                                    <p class="TTT_tabs js_GB_text"></p>
+                                    <div class="base_bar_container">
+                                        <div class="Min_bar_fill js_Min_bar"></div>
+                                    </div>
+                                    <p class="TTT_tabs js_Min_text"></p>
+                                </div>
+                                <div class="card_A">
+                                    <p class="T_tabs">Сумма к оплате до 16 мая 2026</p>
+                                    <p class="TT_tabs">Включает в себя следующий и текущий биллинг-цикл</p>
+                                    <div class="HELP">
+                                        <a href="#" class="icon-link">
+                                            <img src="Bug_Report.png" alt="Описание">
+                                        </a>
+                                        <p class="TTTT_tabs">Не уалось загрузить</p>
+                                        <p class="TTTT_tabs">Отправьте обратную связь</p>
+                                    </div>
+                                </div>
+                                <div class="card_A">
+                                    <p class="T_tabs">Фича 1</p>
+                                    <p class="TTT_tabs">Тут будет самое прекрасное описание данной фичи, но я не знаю, что именно написать. Извините</p>
+                                </div>
+                                <div class="card_A">
+                                    <p class="T_tabs">Сумма к оплате до 16 мая 2026</p>
+                                    <p class="TT_tabs">Включает в себя следующий и текущий биллинг-цикл</p>
+                                    <div class="HELP">
+                                        <a href="#" class="icon-link">
+                                            <img src="Bug_Report.png" alt="Описание">
+                                        </a>
+                                        <p class="TTTT_tabs">Не уалось загрузить</p>
+                                        <p class="TTTT_tabs">Отправьте обратную связь</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-areaR">
+                                <div class="card_Aa">
+                                    <p class="T_tabs">За посление 24 часа клиент попадал под влияние массовых блокировок интернета</p>
+                                    <a href="#" class="text-link">
+                                        <p class="A_tabs">Открыть новость</p>
+                                    </a>
+                                </div>
+                                <div class="card_A">
+                                    <p class="T_tabs">Обновление персональных данных</p>
+                                    <p class="TTT_tabs">Не требуется</p>
+                                </div>
+                                <div class="card_A">
+                                    <p class="T_tabs">Список подключенных услуг</p>
+                                    <input type="text" class="main-inputtt" placeholder="Название услуги">
+                                    <div class="SOC">
+                                        <p class="TTTT_tabs">Название услуги</p>
+                                        <p class="TTTT_tabs">АП</p>
+                                        <p class="TTTT_tabs">Подключение</p>
+                                    </div>
+                                    <div>
+                                        <div class="Services">
+                                        <p class="TT_tabs">Услуга 1</p>
+                                        <p class="TT_tabs">4.5 рублей</p>
+                                        <p class="TT_tabs">24 окт 2024</p>
+                                    </div>
+                                        <div class="Services">
+                                        <p class="TT_tabs">Услуга 2</p>
+                                        <p class="TT_tabs">24 окт 2024</p>
+                                    </div>
+                                    <div class="Services">
+                                        <p class="TT_tabs">Услуга 3</p>
+                                        <p class="TT_tabs">24 окт 2024</p>
+                                    </div>
+                                    <div class="Services">
+                                        <p class="TT_tabs">Услуга 4</p>
+                                        <p class="TT_tabs">8.5 рублей</p>
+                                        <p class="TT_tabs">22 дек 2025</p>
+                                    </div>
+                                    <div class="Services">
+                                        <p class="TT_tabs">Услуга 5</p>
+                                        <p class="TT_tabs">22 дек 2025</p>
+                                    </div>
+                                    <div class="Services">
+                                        <p class="TT_tabs">Услуга 6</p>
+                                        <p class="TT_tabs">24 окт 2024</p>
+                                    </div>
+                                    <div class="Services">
+                                        <p class="TT_tabs">Услуга 7</p>
+                                        <p class="TT_tabs">6 рублей</p>
+                                        <p class="TT_tabs">24 окт 2024</p>
+                                    </div>
+                                    <div class="Services">
+                                        <p class="TT_tabs">Услуга 8</p>
+                                        <p class="TT_tabs">55 рублей</p>
+                                        <p class="TT_tabs">22 дек 2025</p>
+                                    </div>
+                                    <div class="Services">
+                                        <p class="TT_tabs">Услуга 9</p>
+                                        <p class="TT_tabs">10 рублей</p>
+                                        <p class="TT_tabs">29 июн 2023</p>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                </div>
+            </main>
+        <script src="SM.js"></script>
+    </body>
