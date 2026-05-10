@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'MyCustomFont';
+    font-family: 'Google Sans';
     /* Указываем путь к .ttf файлу и формат 'truetype' */
-    src: url('oogleSans-VariableFont_GRAD,opsz,wght.ttf') format('truetype');
+    src: url('GoogleSans-VariableFont_GRAD,opsz,wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -250,18 +250,33 @@ div.A {
     position: fixed;
     overflow-y: auto;
 }
-.control_panel {
+
+.sidebar_r {
+    position: fixed;
+    display: flex;
+    z-index: 1001;
+    right: -300px;
+    top: 0;
     height: 100%;
+    transition: right 0.1s ease-in-out;
+}
+
+.control_panel {
     border-color: #f1f1f3;
     display: block;
     border-width: 2px;
     border-style: solid;
     background-color: #ffffff; 
     width: 60px;
-    right: 0;
-    top: 0;
-    position: fixed;
-    z-index: 1001;
+    
+}
+.res {
+    
+    border-color: #f1f1f3;
+    display: block;
+    background-color: #ffffff; 
+    width: 300px;
+
 }
 .control_icon {
     display: flex;
@@ -299,7 +314,26 @@ div.A {
     display: flex;
 
 }
+.yyy {
 
+}
+.uuu {
+    border-color: #d1d1d1;
+    border-radius: 15px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: rgb(241, 241, 241);
+    width: 250px;
+    height: 30px;
+    margin-top: 15px;
+    padding: 15px;
+
+}
+.res {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
 .content-area {
     display: flex;
     margin-left: 280px;
